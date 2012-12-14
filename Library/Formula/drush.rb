@@ -10,5 +10,6 @@ class Drush < Formula
   def install
     libexec.install Dir['*']
     bin.install_symlink libexec/'drush'
+    (etc+'bash_completion.d').install_symlink libexec/'drush.complete.sh'
   end
 end
